@@ -1,0 +1,33 @@
+{
+  "name": "loren-thinks",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Loren.thinks — a publishing site for thoughts on the AI / technology landscape.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@portabletext/react": "^3.1.0",
+    "@portabletext/types": "^2.0.13",
+    "@sanity/image-url": "^1.1.0",
+    "@sanity/vision": "^3.62.3",
+    "next": "14.2.35",
+    "next-sanity": "^9.8.10",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sanity": "^3.62.3",
+    "styled-components": "^6.1.13"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.35",
+    "typescript": "^5.5.4"
+  }
+}
