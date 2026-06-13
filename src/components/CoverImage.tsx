@@ -9,13 +9,6 @@ interface Props {
   width?: number
 }
 
-type UrlCover = { url: string; alt?: string }
-
-/** Narrows the cover union to the plain-URL (sample content) branch. */
-function isUrlCover(cover: CoverImageType): cover is UrlCover {
-  return typeof (cover as { url?: unknown }).url === 'string'
-}
-
 /**
  * Renders a cover image from either a Sanity image asset (live CMS) or a plain
  * URL string (bundled sample content). Uses a plain <img> so both cases work
@@ -25,7 +18,7 @@ export function CoverImage({ cover, alt, className, width = 1200 }: Props) {
   if (!cover) return null
 
   let src: string | null = null
-  if (isUrlCover(cover)) {
+  if ('url' in cover && cover.url) {
     src = cover.url
   } else {
     const builder = urlForImage(cover)
